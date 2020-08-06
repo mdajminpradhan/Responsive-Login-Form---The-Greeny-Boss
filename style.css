@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.wrapper img {
+    width: 100%;
+}
+
+.left-section img {
+    width: 100%;
+    
+}
+
+.right-section {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.right-section img {
+    width: 35%;
+    margin-bottom: 40px;
+}
+
+.email, .password {
+    background: transparent;
+    border-bottom: 2px solid #2BC891;
+    display: grid;
+    grid-template-columns: 12% 88%;
+}
+
+.email {
+    margin-bottom: 40px;
+
+}
+
+.email input, .password input {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.email i, .password i {
+    color: #2BC891;
+    font-size: 1.4rem;
+}
+
+
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 50px;
+}
+.btn:hover{
+    background-position: right;
+}
+
+@media only screen and (max-width: 1250px){
+    .wrapper {
+        margin-top: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    .left-section img {
+        width: 110%;
+    }
+}
+
+@media only screen and (max-width: 850px){
+
+    .wrapper {
+        grid-gap: 80px !important;
+    }
+
+    .left-section img {
+        width: 150%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .wrapper {
+        grid-template-columns: 100%;
+        margin-top: 0 !important;
+    }
+
+    .left-section img {
+        display: none;
+    }
+
+    .btn {
+        background: rgba(0,0,0,0.8);
+    }
+
+    .btn:hover {
+        background: rgba(0,0,0,.95)
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .email, .password {
+        border-bottom: 2px solid rgba(0,0,0,0.5);
+    }
+
+    input:placeholder {
+        color: black
+    }
+
+    i {
+        color: rgba(0,0,0,0.8) !important
+    }
+
+    .right-section {
+        width: 85%
+    }
+}
